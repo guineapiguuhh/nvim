@@ -9,10 +9,11 @@ return {
 		},
 		lazy = false,
 		config = function()
+			vim.keymap.set("n", "\\", ":Neotree toggle<CR>")
 			require("neo-tree").setup({
 				event_handlers = {
 					{
-						event = "",
+						event = "file_open_requested",
 						handler = function()
 							require("neo-tree.command").execute({ action = "close" })
 						end,
