@@ -10,8 +10,22 @@ if vim.g.neovide then
 end
 vim.diagnostic.config({ virtual_text = true })
 vim.o.number = true
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
+
+--<fmt>
+vim.o.shiftwidth = 4 --default: 4
+vim.o.tabstop = 4 --default: 4
+
+local languages = require("languages")
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "*",
+	callback = function()
+		local language = languages[vim.bo.filetype]
+		if language then
+			vim.o.shiftwidth = language.shiftwidth or vim.o.shiftwidth
+			vim.o.tabstop = language.tabstop or vim.o.tabstop
+		end
+	end,
+})
 
 --<keybinds>
 vim.keymap.set({ "n", "i", "v" }, "<C-z>", "<Cmd>:undo<cr>")

@@ -34,5 +34,6 @@ return {
 			root_markers = { "gleam.toml", "manifest.toml", ".git" },
 			settings = {},
 		},
+		shiftwidth = 2,
 	},
 }
