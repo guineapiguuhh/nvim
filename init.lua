@@ -6,7 +6,7 @@ require("lsp")
 
 --<appearance>
 if vim.g.neovide then
-	vim.o.guifont = "JetBrainsMonoNL NF:h13.35"
+	vim.o.guifont = "JetBrainsMonoNL NF:h13"
 end
 vim.diagnostic.config({ virtual_text = true })
 vim.o.number = true

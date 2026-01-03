@@ -14,9 +14,12 @@ return {
 				},
 			},
 		},
+		shiftwidth = 4,
+		tabstop = 4,
 	},
 	zig = {
 		fmt = { "zigfmt" },
+		linters = { "zlint" },
 		lsp_name = "zls",
 		lsp_config = {
 			filetypes = { "zig", "zir" },
@@ -24,6 +27,8 @@ return {
 			root_markers = { "build.zig.zor", "build.zig", ".git" },
 			settings = {},
 		},
+		shiftwidth = 4,
+		tabstop = 4,
 	},
 	gleam = {
 		fmt = { "gleam" },
@@ -35,5 +40,27 @@ return {
 			settings = {},
 		},
 		shiftwidth = 2,
+		tabstop = 2,
+	},
+	toml = {
+		fmt = { "tombi" },
+		linters = { "tombi" },
+		lsp_name = "tombi",
+		lsp_config = {
+			filetypes = { "toml" },
+			cmd = { "tombi", "lsp" },
+			settings = {},
+		},
+	},
+	json = {
+		fmt = { "jq" },
+		linters = { "jsonlint" },
+		lsp_name = "jsonls",
+		lsp_config = {
+			filetypes = { "json", "jsonc" },
+			cmd = { "vscode-json-language-server", "--stdio" },
+			root_markers = { ".git" },
+			settings = {},
+		},
 	},
 }
