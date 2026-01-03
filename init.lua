@@ -2,10 +2,13 @@
 require("config.lazy")
 
 --<lsp>
-require("lsp")
+require("config.lsp")
 
 --<appearance>
 if vim.g.neovide then
+	vim.g.neovide_window_blurred = false
+	vim.g.neovide_floating_blur_amount_x = 0.0
+	vim.g.neovide_floating_blur_amount_y = 0.0
 	vim.o.guifont = "JetBrainsMonoNL NF:h13"
 end
 vim.diagnostic.config({ virtual_text = true })
@@ -15,7 +18,7 @@ vim.o.number = true
 vim.o.shiftwidth = 4 --default: 4
 vim.o.tabstop = 4 --default: 4
 
-local languages = require("languages")
+local languages = require("config.languages")
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "*",
 	callback = function()
@@ -28,5 +31,4 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 --<keybinds>
-vim.keymap.set({ "n", "i", "v" }, "<C-z>", "<Cmd>:undo<cr>")
-vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<Cmd>:w<CR>")
+require("config.keybinds")

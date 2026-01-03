@@ -19,6 +19,7 @@ return {
 	},
 	zig = {
 		fmt = { "zigfmt" },
+		use_treesitter = true,
 		linters = { "zlint" },
 		lsp_name = "zls",
 		lsp_config = {
@@ -32,6 +33,7 @@ return {
 	},
 	gleam = {
 		fmt = { "gleam" },
+		use_treesitter = true,
 		lsp_name = "gleam",
 		lsp_config = {
 			filetypes = { "gleam" },
@@ -54,6 +56,7 @@ return {
 	},
 	json = {
 		fmt = { "jq" },
+		use_treesitter = true,
 		linters = { "jsonlint" },
 		lsp_name = "jsonls",
 		lsp_config = {

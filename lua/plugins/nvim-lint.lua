@@ -5,7 +5,7 @@ return {
 			local lint = require("lint")
 
 			local linters_by_ft = {}
-			for key, value in pairs(require("languages")) do
+			for key, value in pairs(require("config.languages")) do
 				if value.linters then
 					linters_by_ft[key] = value.linters
 				end

@@ -5,12 +5,12 @@ return {
 			local conform = require("conform")
 
 			local formatters_by_ft = {}
-			for key, value in pairs(require("languages")) do
+			for key, value in pairs(require("config.languages")) do
 				if value.fmt then
 					formatters_by_ft[key] = value.fmt
 				end
 			end
-			formatters_by_ft.lua = {"stylua"};
+			formatters_by_ft.lua = { "stylua" }
 
 			conform.setup({
 				formatters_by_ft = formatters_by_ft,
