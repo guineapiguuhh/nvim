@@ -8,8 +8,6 @@ return {
 			--{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		},
 		config = function()
-			local builtin = require("telescope.builtin")
-			vim.keymap.set("n", "f", builtin.find_files)
 			require("telescope").setup({})
 		end,
 	},

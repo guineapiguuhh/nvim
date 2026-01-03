@@ -5,7 +5,6 @@ return {
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		lazy = false,
 		config = function()
-			vim.keymap.set("n", "\\", "<Cmd>:Oil<CR>")
 			require("oil").setup({})
 		end,
 	},
