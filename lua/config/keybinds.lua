@@ -1,12 +1,18 @@
-local map = vim.keymap
+local function set(mode, lhs, rhs, opts)
+	vim.keymap.set(mode, lhs, rhs, opts or { remap = true })
+end
 
-local builtin = require("telescope.builtin")
-map.set("n", "f", builtin.find_files)
+-- delete default keybinds
+set("n", "i", "<Nop>")
+set("n", "u", "<Nop>")
 
-map.set("n", "\\", "<Cmd>:Oil<CR>")
+-- custom bindings
+set("n", "f", "<Cmd>:Pick files<CR>")
 
-map.set("v", ";", "<Cmd>:norm gcc<CR>", { desc = "Toggle comment" })
-map.set("n", ";", "<Cmd>:norm gcc<CR>", { desc = "Toggle comment" })
+set("n", "'", "<Cmd>:Oil<CR>")
 
-map.set({ "n", "i", "v" }, "<C-z>", "<Cmd>:undo<cr>")
-map.set({ "n", "i" }, "<C-s>", "<Cmd>:w<CR>")
+set("v", ";", "<Cmd>:norm gcc<CR>", { desc = "Toggle comment" })
+set("n", ";", "<Cmd>:norm gcc<CR>", { desc = "Toggle comment" })
+
+set("n", "z", "<Cmd>:undo<cr>")
+set("n", "s", "<Cmd>:w<CR>")

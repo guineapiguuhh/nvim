@@ -1,6 +1,7 @@
 return {
 	lua = {
 		fmt = { "stylua" },
+		use_treesitter = true,
 		lsp_name = "lua_ls",
 		lsp_config = {
 			cmd = { "lua-language-server" },
@@ -14,8 +15,8 @@ return {
 				},
 			},
 		},
-		shiftwidth = 4,
-		tabstop = 4,
+		shiftwidth = 2,
+		tabstop = 2,
 	},
 	zig = {
 		fmt = { "zigfmt" },
