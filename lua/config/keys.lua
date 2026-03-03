@@ -1,8 +1,7 @@
----@type NvimConfig
-return {
-	colorscheme = "everforest",
+local WhichKey = require("which-key")
 
-	keys = {
+WhichKey.add(
+	{
 		{ "'", "<Cmd>:Oil<CR>", desc = "open Oil", mode = "n" },
 
 		{ "<Esc>", "<Esc><Cmd>noh<CR>", mode = { "n", "v" } },
@@ -27,30 +26,5 @@ return {
 		{ "sh", desc = "Highlight surrounding", mode = { "n", "v" } },
 		{ "sr", desc = "Replace surrounding", mode = { "n", "v" } },
 	},
-
-	config = function()
-		vim.o.wrap = false
-		vim.o.clipboard = "unnamedplus"
-		vim.o.fileformats = "dos"
-		vim.o.relativenumber = true
-		vim.o.termguicolors = true
-
-		vim.diagnostic.config({
-			signs = {
-				text = {
-					"",
-					"",
-					"",
-					"",
-				},
-			},
-		})
-
-		if vim.g.neovide then
-			vim.g.neovide_window_blurred = false
-			vim.g.neovide_floating_blur_amount_x = 0.0
-			vim.g.neovide_floating_blur_amount_y = 0.0
-			vim.o.guifont = "JetBrainsMono NF:h13"
-		end
-	end,
-}
+	{}
+)

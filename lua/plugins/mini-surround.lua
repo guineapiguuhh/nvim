@@ -1,8 +1,8 @@
 ---@type LazyPluginSpec
 return {
-	"nvim-mini/mini.statusline",
+	"nvim-mini/mini.surround",
 	version = "*",
 	config = function()
-		require("mini.statusline").setup()
+		require("mini.surround").setup()
 	end,
 }
