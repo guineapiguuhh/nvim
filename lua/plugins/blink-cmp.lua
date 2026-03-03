@@ -3,12 +3,26 @@ return {
 	"saghen/blink.cmp",
 
 	version = "1.*",
+	dependencies = { "L3MON4D3/LuaSnip", version = "v2.*" },
 	opts = {
 		keymap = { preset = "default" },
+		fuzzy = { implementation = "rust" },
+		snippets = { preset = "luasnip" },
 		signature = { enabled = true, window = { show_documentation = false } },
 
 		appearance = {
 			nerd_font_variant = "default",
+		},
+
+		sources = {
+			default = { "lazydev", "lsp", "path", "buffer", "snippets" },
+			providers = {
+				lazydev = {
+					name = "LazyDev",
+					module = "lazydev.integrations.blink",
+					score_offset = 100,
+				},
+			},
 		},
 
 		completion = {
@@ -38,18 +52,6 @@ return {
 				},
 			},
 		},
-
-		sources = {
-			default = { "lazydev", "lsp", "path", "buffer" },
-			providers = {
-				lazydev = {
-					name = "LazyDev",
-					module = "lazydev.integrations.blink",
-					score_offset = 100,
-				},
-			},
-		},
-		fuzzy = { implementation = "rust" },
 	},
 
 	opts_extend = { "sources.default" },
