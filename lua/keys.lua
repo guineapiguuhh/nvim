@@ -17,10 +17,6 @@ WhichKey.add({
 	{ "<leader>f", group = "file" },
 	{ "<leader>ff", "<Cmd>:FzfLua files<CR>", desc = "open file finder", mode = "n" },
 
-	{ "<leader>t", group = "terminal" },
-	{ "<leader>tt", "<Cmd>:ToggleTerm size=70 direction=vertical<CR>", desc = "open terminal", mode = "n" },
-	{ "<leader>tT", "<Cmd>:ToggleTerm<CR>", desc = "open terminal", mode = "n" },
-
 	{ "<leader>w", "<Cmd>:w<CR>", desc = "write buffer", mode = "n" },
 
 	{ "s", group = "surround" },
