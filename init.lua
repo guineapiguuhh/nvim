@@ -1,6 +1,6 @@
-require("config.lazy")
+require("./lazy")
 require("mason").setup()
 vim.notify = require("notify")
 require("options")
 require("autocmd")
-require("config.keys")
+require("keys")
