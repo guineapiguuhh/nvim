@@ -1,5 +1,0 @@
----@class NvimConfig
----@field colorscheme? string
----@field keys? wk.Spec|{ [number]: wk.Spec|{ [number]: wk.Spec } }
----@field init? function
----@field config? function
