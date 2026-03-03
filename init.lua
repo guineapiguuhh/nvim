@@ -57,20 +57,20 @@ if config.config then
 	config.config()
 end
 
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = vim.languages.keys(),
-	callback = function()
-		pcall(vim.treesitter.start)
-
-		local format = vim.languages.get_format(vim.bo.filetype)
-		if not format then
-			return
-		end
-		vim.opt_local.shiftwidth = format.shiftwidth
-		vim.opt_local.tabstop = format.tabstop
-		vim.opt_local.expandtab = not format.spaces
-	end,
-})
+-- vim.api.nvim_create_autocmd("FileType", {
+-- 	pattern = vim.languages.keys(),
+-- 	callback = function()
+-- 		pcall(vim.treesitter.start)
+--
+-- 		local format = vim.languages.get_format(vim.bo.filetype)
+-- 		if not format then
+-- 			return
+-- 		end
+-- 		vim.opt_local.shiftwidth = format.shiftwidth
+-- 		vim.opt_local.tabstop = format.tabstop
+-- 		vim.opt_local.expandtab = not format.spaces
+-- 	end,
+-- })
 
 local Conform = require("conform")
 Conform.setup({ formatters_by_ft = vim.languages.get_formatters() })
