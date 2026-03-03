@@ -21,6 +21,8 @@ WhichKey.add({
 	{ "<leader>tt", "<Cmd>:ToggleTerm size=70 direction=vertical<CR>", desc = "open terminal", mode = "n" },
 	{ "<leader>tT", "<Cmd>:ToggleTerm<CR>", desc = "open terminal", mode = "n" },
 
+	{ "<leader>w", "<Cmd>:w<CR>", desc = "write buffer", mode = "n" },
+
 	{ "s", group = "surround" },
 	{ "sa", desc = "Add surrounding", mode = { "n", "v" } },
 	{ "sd", desc = "Delete surrounding", mode = { "n", "v" } },
