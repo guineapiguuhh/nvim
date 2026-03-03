@@ -10,8 +10,8 @@ vim.o.fileformats = "dos"
 vim.o.relativenumber = true
 vim.o.termguicolors = true
 
-local colorscheme = "onedark"
-vim.cmd.colorscheme(colorscheme or nil)
+local colorscheme = "vscode"
+vim.cmd.colorscheme(colorscheme or "onedark")
 
 require("conform").setup({
 	formatters_by_ft = {
