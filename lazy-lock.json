@@ -32,6 +32,7 @@
   "onedarkpro.nvim": { "branch": "main", "commit": "05b0d6446a4dcf866edc7ad637a13e4d7e2d5c32" },
   "rose-pine": { "branch": "main", "commit": "cf2a288696b03d0934da713d66c6d71557b5c997" },
   "rust-theme": { "branch": "main", "commit": "2545d6db4ba9932b7a1b815a993901271b6f768b" },
+  "toggleterm.nvim": { "branch": "main", "commit": "50ea089fc548917cc3cc16b46a8211833b9e3c7c" },
   "tokyonight.nvim": { "branch": "main", "commit": "5da1b76e64daf4c5d410f06bcb6b9cb640da7dfd" },
   "trouble.nvim": { "branch": "main", "commit": "bd67efe408d4816e25e8491cc5ad4088e708a69a" },
   "vscode-theme": { "branch": "main", "commit": "aa1102a7e15195c9cca22730b09224a7f7745ba8" },
