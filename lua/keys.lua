@@ -6,20 +6,20 @@ WhichKey.add({
 
 	{ "<Esc>", "<Esc><Cmd>noh<CR>", mode = { "n", "v" } },
 
-	{
-		"<S-Tab>",
-		function()
-			LuaSnip.jump(-1)
-		end,
-		mode = { "n", "i" },
-	},
-	{
-		"<Tab>",
-		function()
-			LuaSnip.jump(1)
-		end,
-		mode = { "n", "i" },
-	},
+	-- {
+	-- 	"<S-Tab>",
+	-- 	function()
+	-- 		LuaSnip.jump(-1)
+	-- 	end,
+	-- 	mode = { "n", "i" },
+	-- },
+	-- {
+	-- 	"<Tab>",
+	-- 	function()
+	-- 		LuaSnip.jump(1)
+	-- 	end,
+	-- 	mode = { "n", "i" },
+	-- },
 
 	{ "<Left>", "<c-w>h", mode = { "n", "v", "i" } },
 	{ "<Down>", "<c-w>j", mode = { "n", "v", "i" } },
