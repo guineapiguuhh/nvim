@@ -1,5 +1,5 @@
 if vim.g.neovide then
-	vim.o.guifont = "FiraCode Nerd Font:h12.9"
+	vim.o.guifont = "FiraCode Nerd Font:h13"
 
 	vim.g.neovide_window_blurred = false
 	vim.g.neovide_floating_shadow = false
@@ -31,6 +31,8 @@ require("conform").setup({
 		json = { "jq" },
 		toml = { "tombi" },
 		gleam = { "gleam" },
+		dart = { "dart_format" },
+		nim = { "nimpretty" },
 	},
 })
 
@@ -45,6 +47,8 @@ vim.lsp.enable({
 	"tombi",
 	"yamlls",
 	"zls",
+	"dartls",
+	"nim_langserver",
 })
 
 vim.diagnostic.config({

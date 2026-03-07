@@ -1,0 +1,7 @@
+require("./lazy")
+require("mason").setup({})
+vim.notify = require("notify")
+require("keys")
+require("autocmd")
+require("snippets")
+require("options")
