@@ -27,11 +27,9 @@ require("conform").setup({
 		yaml = { "yamlfmt" },
 		csharp = { "csharpier" },
 		go = { "gofmt" },
-		java = { "google-java-format" },
 		json = { "jq" },
 		toml = { "tombi" },
 		gleam = { "gleam" },
-		dart = { "dart_format" },
 		nim = { "nimpretty" },
 	},
 })
@@ -47,7 +45,6 @@ vim.lsp.enable({
 	"tombi",
 	"yamlls",
 	"zls",
-	"dartls",
 	"nim_langserver",
 })
 
