@@ -16,8 +16,8 @@ vim.o.fileformats = "dos"
 vim.o.relativenumber = true
 vim.o.termguicolors = true
 
-local colorscheme = nil
-vim.cmd.colorscheme(colorscheme or "onedark")
+local colorscheme = "vscode"
+vim.cmd.colorscheme(colorscheme)
 
 require("conform").setup({
 	formatters_by_ft = {
@@ -62,29 +62,61 @@ vim.diagnostic.config({
 	},
 })
 
-require("lualine").setup({})
--- require("lualine").setup({
--- 	sections = {
--- 		lualine_x = {
--- 			{
--- 				require("noice").api.status.message.get_hl,
--- 				cond = require("noice").api.status.message.has,
--- 			},
--- 			{
--- 				require("noice").api.status.command.get,
--- 				cond = require("noice").api.status.command.has,
--- 				color = { fg = "#ff9e64" },
--- 			},
--- 			{
--- 				require("noice").api.status.mode.get,
--- 				cond = require("noice").api.status.mode.has,
--- 				color = { fg = "#ff9e64" },
--- 			},
--- 			{
--- 				require("noice").api.status.search.get,
--- 				cond = require("noice").api.status.search.has,
--- 				color = { fg = "#ff9e64" },
--- 			},
--- 		},
--- 	},
--- })
+require("lualine").setup({
+	options = {
+		icons_enabled = true,
+		theme = "auto",
+		component_separators = { left = "│", right = "│" },
+		section_separators = { left = "", right = "" },
+		disabled_filetypes = {
+			statusline = {},
+			winbar = {},
+		},
+		ignore_focus = {},
+		always_divide_middle = true,
+		always_show_tabline = true,
+		globalstatus = false,
+		refresh = {
+			statusline = 1000,
+			tabline = 1000,
+			winbar = 1000,
+			refresh_time = 16,
+			events = {
+				"WinEnter",
+				"BufEnter",
+				"BufWritePost",
+				"SessionLoadPost",
+				"FileChangedShellPost",
+				"VimResized",
+				"Filetype",
+				"CursorMoved",
+				"CursorMovedI",
+				"ModeChanged",
+			},
+		},
+	},
+	sections = {
+		lualine_c = {
+			{
+				"filename",
+				symbols = {
+					modified = "*",
+				},
+			},
+		},
+		lualine_x = {
+			{
+				require("noice").api.status.command.get,
+				cond = require("noice").api.status.command.has,
+			},
+			{
+				require("noice").api.status.mode.get,
+				cond = require("noice").api.status.mode.has,
+			},
+			{
+				require("noice").api.status.search.get,
+				cond = require("noice").api.status.search.has,
+			},
+		},
+	},
+})
