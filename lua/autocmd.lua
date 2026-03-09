@@ -11,3 +11,13 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 		require("conform").format({ bufnr = args.buf })
 	end,
 })
+
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function()
+		local WhichKey = require("which-key")
+		WhichKey.add({
+			{ "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", mode = { "n" } },
+			{ "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", mode = { "n" } },
+		}, {})
+	end,
+})
