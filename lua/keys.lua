@@ -2,8 +2,9 @@ local WhichKey = require("which-key")
 
 WhichKey.add({
 	{ "'", "<Cmd>:Oil<CR>", desc = "open Oil", mode = "n" },
-
 	{ "<Esc>", "<Esc><Cmd>noh<CR>", mode = { "n", "v" } },
+
+	{ "<leader>w", "<Cmd>w<CR>", desc = "write buffer", mode = "n" },
 
 	{ "<Left>", "<c-w>h", mode = { "n", "v", "i" } },
 	{ "<Down>", "<c-w>j", mode = { "n", "v", "i" } },
@@ -18,8 +19,6 @@ WhichKey.add({
 	{ "<leader>fg", "<Cmd>FzfLua live_grep<CR>", desc = "open FzF file finder", mode = "n" },
 	{ "<leader>ff", "<Cmd>FzfLua files<CR>", desc = "open FzF file finder", mode = "n" },
 	{ "<leader>fb", "<Cmd>FzfLua buffers<CR>", desc = "open FzF buffers", mode = "n" },
-
-	{ "<leader>w", "<Cmd>w<CR>", desc = "write buffer", mode = "n" },
 
 	{ "s", group = "surround" },
 	{ "sa", desc = "Add surrounding", mode = { "n", "v" } },
