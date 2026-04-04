@@ -16,7 +16,7 @@ vim.o.fileformats = "dos"
 vim.o.relativenumber = true
 vim.o.termguicolors = true
 
-local colorscheme = "vscode"
+local colorscheme = "onedark"
 vim.cmd.colorscheme(colorscheme)
 
 require("conform").setup({
@@ -30,7 +30,7 @@ require("conform").setup({
 		json = { "jq" },
 		toml = { "tombi" },
 		gleam = { "gleam" },
-		nim = { "nimpretty" },
+		odin = { "odinfmt" },
 	},
 })
 
@@ -45,7 +45,7 @@ vim.lsp.enable({
 	"tombi",
 	"yamlls",
 	"zls",
-	"nim_langserver",
+	"ols",
 })
 
 vim.diagnostic.config({
