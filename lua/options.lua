@@ -16,7 +16,7 @@ vim.o.fileformats = "dos"
 vim.o.relativenumber = true
 vim.o.termguicolors = true
 
-local colorscheme = "onedark"
+local colorscheme = "monokai-pro-classic"
 vim.cmd.colorscheme(colorscheme)
 
 require("conform").setup({
