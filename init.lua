@@ -1,6 +1,5 @@
 do
     require("config.lazy")
-    require("config.mason")
 end
 
 do
