@@ -1,6 +1,12 @@
-require("./lazy")
-require("mason").setup({})
-require("keys")
-require("autocmd")
-require("snippets")
-require("options")
+do
+    require("config.lazy")
+    require("config.mason")
+end
+
+do
+    require("keys")
+    require("autocmd")
+    require("snippets")
+    require("options")
+    require("config")
+end

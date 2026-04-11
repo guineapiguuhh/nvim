@@ -1,2 +1,5 @@
 ---@type LazyPluginSpec
-return { "nvim-lualine/lualine.nvim" }
+return {
+  "nvim-lualine/lualine.nvim",
+	dependencies = { "nvim-mini/mini.icons" },
+}

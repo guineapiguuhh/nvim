@@ -7,7 +7,7 @@ return {
 		open_mapping = "<C-t>",
 
 		float_opts = {
-			border = "rounded",
+			border = "single",
 		},
 	},
 }

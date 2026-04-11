@@ -1,5 +1,5 @@
 if vim.g.neovide then
-	vim.o.guifont = "FiraCode Nerd Font:h13"
+	vim.o.guifont = "JetBrainsMonoNL NF:h13"
 
 	vim.g.neovide_window_blurred = false
 	vim.g.neovide_floating_shadow = false
@@ -15,24 +15,11 @@ vim.o.clipboard = "unnamedplus"
 vim.o.fileformats = "dos"
 vim.o.relativenumber = true
 vim.o.termguicolors = true
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4
 
 local colorscheme = "monokai-pro-classic"
 vim.cmd.colorscheme(colorscheme)
-
-require("conform").setup({
-	formatters_by_ft = {
-		zig = { "zigfmt" },
-		lua = { "stylua" },
-		rust = { "rustfmt" },
-		yaml = { "yamlfmt" },
-		csharp = { "csharpier" },
-		go = { "gofmt" },
-		json = { "jq" },
-		toml = { "tombi" },
-		gleam = { "gleam" },
-		odin = { "odinfmt" },
-	},
-})
 
 vim.lsp.enable({
 	"lua_ls",
@@ -59,61 +46,3 @@ vim.diagnostic.config({
 	},
 })
 
-require("lualine").setup({
-	options = {
-		icons_enabled = true,
-		theme = "auto",
-		component_separators = { left = "│", right = "│" },
-		section_separators = { left = "", right = "" },
-		disabled_filetypes = {
-			statusline = {},
-			winbar = {},
-		},
-		ignore_focus = {},
-		always_divide_middle = true,
-		always_show_tabline = true,
-		globalstatus = false,
-		refresh = {
-			statusline = 1000,
-			tabline = 1000,
-			winbar = 1000,
-			refresh_time = 16,
-			events = {
-				"WinEnter",
-				"BufEnter",
-				"BufWritePost",
-				"SessionLoadPost",
-				"FileChangedShellPost",
-				"VimResized",
-				"Filetype",
-				"CursorMoved",
-				"CursorMovedI",
-				"ModeChanged",
-			},
-		},
-	},
-	sections = {
-		lualine_c = {
-			{
-				"filename",
-				symbols = {
-					modified = "*",
-				},
-			},
-		},
-		lualine_x = {
-			{
-				require("noice").api.status.command.get,
-				cond = require("noice").api.status.command.has,
-			},
-			{
-				require("noice").api.status.mode.get,
-				cond = require("noice").api.status.mode.has,
-			},
-			{
-				require("noice").api.status.search.get,
-				cond = require("noice").api.status.search.has,
-			},
-		},
-	},
-})
