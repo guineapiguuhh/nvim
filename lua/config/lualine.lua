@@ -2,8 +2,8 @@ require("lualine").setup({
 	options = {
 		icons_enabled = true,
 		theme = "auto",
-		component_separators = { left = "|", right = "|" },
-		section_separators = { left = "", right = "" },
+		component_separators = { left = ";", right = ";" },
+		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
 			statusline = {},
 			winbar = {},
@@ -18,6 +18,7 @@ require("lualine").setup({
 			winbar = 1000,
 			refresh_time = 16,
 			events = {
+                "RecordingLeave",
 				"WinEnter",
 				"BufEnter",
 				"BufWritePost",
@@ -32,14 +33,7 @@ require("lualine").setup({
 		},
 	},
 	sections = {
-		lualine_a = {
-			{
-                "filetype",
-                colored = false,
-                icon_only = false,
-                icon = { align = "left" },
-			},
-        },
+		lualine_a = { "mode" },
 		lualine_c = {
 			{
 				"filename",

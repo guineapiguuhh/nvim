@@ -27,21 +27,23 @@ vim.o.fileformats = "dos"
 vim.o.relativenumber = true
 vim.o.termguicolors = true
 
-local colorscheme = "monokai-pro-octagon"
+local colorscheme = "zenbones"
 vim.cmd.colorscheme(colorscheme)
 
 vim.lsp.enable({
-	"lua_ls",
-	"gleam",
-	"csharp_ls",
-	"gopls",
-	"jdtls",
 	"jsonls",
-	"rust_analyzer",
-	"tombi",
 	"yamlls",
-	"zls",
+	"tombi",
+
+	"jdtls",
+
 	"ols",
+	"gleam",
+	"gopls",
+	"rust_analyzer",
+    "zls",
+	"lua_ls",
+	"csharp_ls",
 })
 
 vim.diagnostic.config({
