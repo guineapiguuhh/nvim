@@ -35,15 +35,10 @@ vim.lsp.enable({
 	"yamlls",
 	"tombi",
 
-	"jdtls",
-
 	"ols",
-	"gleam",
 	"gopls",
-	"rust_analyzer",
-    "zls",
-	"lua_ls",
 	"csharp_ls",
+	"lua_ls",
 })
 
 vim.diagnostic.config({
