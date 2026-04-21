@@ -35,10 +35,11 @@ vim.lsp.enable({
 	"yamlls",
 	"tombi",
 
+	"lua_ls",
+
 	"ols",
 	"gopls",
 	"csharp_ls",
-	"lua_ls",
 })
 
 vim.diagnostic.config({
