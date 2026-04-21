@@ -1,5 +1,5 @@
 if vim.g.neovide then
-	vim.o.guifont = "JetBrainsMonoNL NF:h13"
+	vim.o.guifont = "Iosevka NFM:h14.5"
 	vim.g.neovide_window_blurred = false
 	vim.g.neovide_floating_shadow = false
 	vim.g.neovide_floating_blur_amount_x = 0
@@ -27,7 +27,7 @@ vim.o.fileformats = "dos"
 vim.o.relativenumber = true
 vim.o.termguicolors = true
 
-local colorscheme = "zenbones"
+local colorscheme = "monokai-pro"
 vim.cmd.colorscheme(colorscheme)
 
 vim.lsp.enable({
@@ -51,4 +51,3 @@ vim.diagnostic.config({
 		},
 	},
 })
-

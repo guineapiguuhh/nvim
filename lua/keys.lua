@@ -11,6 +11,9 @@ WhichKey.add({
 	{ "<Up>", "<c-w>k", mode = { "n", "v", "i" } },
 	{ "<Right>", "<c-w>l", mode = { "n", "v", "i" } },
 
+	{ "<c-u>", "<c-u>zz", mode = { "n" } },
+	{ "<c-d>", "<c-d>zz", mode = { "n" } },
+
 	{ "<leader>n", group = "notifications" },
 	{ "<leader>nn", "<Cmd>NoiceFzf<CR>", desc = "show notifications", mode = "n" },
 	{ "<leader>nc", "<Cmd>NoiceDismiss<CR>", desc = "clear notifications", mode = "n" },
