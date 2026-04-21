@@ -30,4 +30,54 @@ WhichKey.add({
 	{ "sF", desc = "Find surrounding (to the left)", mode = { "n", "v" } },
 	{ "sh", desc = "Highlight surrounding", mode = { "n", "v" } },
 	{ "sr", desc = "Replace surrounding", mode = { "n", "v" } },
+
+    -- Treesitter text objects
+    {
+        "af",
+        function ()
+            require("nvim-treesitter-textobjects.select")
+            .select_textobject("@function.outer", "textobjects")
+        end,
+        mode = { "x", "o" },
+    },
+    {
+        "if",
+        function ()
+            require("nvim-treesitter-textobjects.select")
+            .select_textobject("@function.inner", "textobjects")
+        end,
+        mode = { "x", "o" },
+    },
+    {
+        "ac",
+        function ()
+            require("nvim-treesitter-textobjects.select")
+            .select_textobject("@class.outer", "textobjects")
+        end,
+        mode = { "x", "o" },
+    },
+    {
+        "ic",
+        function ()
+            require("nvim-treesitter-textobjects.select")
+            .select_textobject("@class.inner", "textobjects")
+        end,
+        mode = { "x", "o" },
+    },
+    {
+        "<leader>a",
+        function ()
+            require("nvim-treesitter-textobjects.swap")
+            .swap_next("@parameter.inner")
+        end,
+        mode = { "n" },
+    },
+    {
+        "<leader>A",
+        function ()
+            require("nvim-treesitter-textobjects.swap")
+            .swap_previous("@parameter.outer")
+        end,
+        mode = { "n" },
+    },
 }, {})

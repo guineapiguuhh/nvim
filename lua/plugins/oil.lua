@@ -4,6 +4,4 @@ return {
 	opts = {},
 	dependencies = { { "nvim-mini/mini.icons", opts = {} } },
 	lazy = false,
-	config = function()
-	end,
 }

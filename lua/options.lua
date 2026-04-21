@@ -1,5 +1,5 @@
 if vim.g.neovide then
-	vim.o.guifont = "Iosevka NFM:h14.5"
+    vim.o.guifont = "Iosevka NFM:h14.5"
 	vim.g.neovide_window_blurred = false
 	vim.g.neovide_floating_shadow = false
 	vim.g.neovide_floating_blur_amount_x = 0
@@ -35,11 +35,10 @@ vim.lsp.enable({
 	"yamlls",
 	"tombi",
 
-	"lua_ls",
-
 	"ols",
 	"gopls",
 	"csharp_ls",
+	"lua_ls",
 })
 
 vim.diagnostic.config({
